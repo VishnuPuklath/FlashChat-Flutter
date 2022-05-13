@@ -2,20 +2,18 @@ import 'package:flutter/material.dart';
 
 class WelcomeButton extends StatelessWidget {
   String text;
+  Color color;
   Function() onPressed;
-  WelcomeButton({required this.text, required this.onPressed});
+  WelcomeButton(
+      {required this.text, required this.onPressed, required this.color});
   @override
   Widget build(BuildContext context) {
-    // return Container(
-    //   height: 100,
-    //   width: 100,
-    //   color: Colors.green,
-    // );
     return SizedBox(
       width: 380,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          primary: color,
           shape: StadiumBorder(),
         ),
         onPressed: onPressed,

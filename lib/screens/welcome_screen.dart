@@ -31,6 +31,7 @@ class WelcomeScreen extends StatelessWidget {
               ],
             ),
             WelcomeButton(
+                color: Colors.lightBlueAccent,
                 text: 'Log In',
                 onPressed: () {
                   Navigator.pushNamed(context, '/login');
@@ -45,6 +46,7 @@ class WelcomeScreen extends StatelessWidget {
             //   height: 20,
             // ),
             WelcomeButton(
+              color: Colors.blue,
               text: 'Register',
               onPressed: () {
                 // Navigator.push(context, MaterialPageRoute(builder: (context) {
