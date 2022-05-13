@@ -3,8 +3,31 @@ import 'package:flash_chat/screens/login_screen.dart';
 import 'package:flash_chat/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
 
-class WelcomeScreen extends StatelessWidget {
+class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<WelcomeScreen> createState() => _WelcomeScreenState();
+}
+
+class _WelcomeScreenState extends State<WelcomeScreen>
+    with SingleTickerProviderStateMixin {
+  AnimationController? controller;
+  Animation? animation;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = AnimationController(
+      duration: Duration(seconds: 1),
+      vsync: this,
+    );
+    animation = CurvedAnimation(parent: controller!, curve: Curves.decelerate);
+    controller!.forward();
+    controller!.addListener(() {
+      setState(() {});
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +38,13 @@ class WelcomeScreen extends StatelessWidget {
           children: [
             Row(
               children: [
-                Container(
-                  height: 100,
-                  child: const Image(
-                    image: AssetImage('images/flashlogo.png'),
+                Hero(
+                  tag: 'logo',
+                  child: Container(
+                    height: 100,
+                    child: const Image(
+                      image: AssetImage('images/flashlogo.png'),
+                    ),
                   ),
                 ),
                 const Text(

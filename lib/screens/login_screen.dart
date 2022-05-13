@@ -11,9 +11,12 @@ class LoginScreen extends StatelessWidget {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            child: Image.asset('images/flashlogo.png'),
-            height: 200,
+          Hero(
+            tag: 'logo',
+            child: Container(
+              child: Image.asset('images/flashlogo.png'),
+              height: 200,
+            ),
           ),
           LoginTextField(
             onChanged: () {},

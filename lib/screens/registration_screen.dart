@@ -11,9 +11,12 @@ class RegistrationScreen extends StatelessWidget {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            child: Image.asset('images/flashlogo.png'),
-            height: 200,
+          Hero(
+            tag: 'logo',
+            child: Container(
+              child: Image.asset('images/flashlogo.png'),
+              height: 200,
+            ),
           ),
           LoginTextField(
             onChanged: () {},
@@ -26,7 +29,7 @@ class RegistrationScreen extends StatelessWidget {
             onChanged: () {},
             hinttext: 'Enter your Password',
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           SizedBox(
