@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flash_chat/components/welcome_button.dart';
 import 'package:flash_chat/screens/login_screen.dart';
 import 'package:flash_chat/screens/registration_screen.dart';
@@ -41,16 +42,16 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 Hero(
                   tag: 'logo',
                   child: Container(
-                    height: 100,
+                    height: animation!.value * 100,
                     child: const Image(
                       image: AssetImage('images/flashlogo.png'),
                     ),
                   ),
                 ),
-                const Text(
-                  'FLASH CHAT',
-                  style: TextStyle(
-                    fontSize: 43.0,
+                TypewriterAnimatedTextKit(
+                  text: ['FLASH CHAT'],
+                  textStyle: TextStyle(
+                    fontSize: 45,
                     fontWeight: FontWeight.w900,
                   ),
                 ),

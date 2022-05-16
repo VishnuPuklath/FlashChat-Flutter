@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "50835666755",
+    "project_id": "flash-chat-f3e0b",
+    "storage_bucket": "flash-chat-f3e0b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50835666755:android:c02b8a40a872a7c46561f6",
+        "android_client_info": {
+          "package_name": "com.dope.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "50835666755-pdp5s1b0lgafvltahg83ir74kjns3h2k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDStxD-f2l5eitIyN2ywmciRD1xB1IdEgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "50835666755-pdp5s1b0lgafvltahg83ir74kjns3h2k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
