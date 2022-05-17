@@ -39,16 +39,20 @@ class _WelcomeScreenState extends State<WelcomeScreen>
           children: [
             Row(
               children: [
-                Hero(
-                  tag: 'logo',
-                  child: Container(
-                    height: animation!.value * 100,
-                    child: const Image(
-                      image: AssetImage('images/flashlogo.png'),
+                Flexible(
+                  child: Hero(
+                    tag: 'logo',
+                    child: Container(
+                      height: animation!.value * 100,
+                      child: const Image(
+                        image: AssetImage('images/flashlogo.png'),
+                      ),
                     ),
                   ),
                 ),
                 TypewriterAnimatedTextKit(
+                  speed: Duration(seconds: 0),
+                  repeatForever: false,
                   text: ['FLASH CHAT'],
                   textStyle: TextStyle(
                     fontSize: 45,
